@@ -5,7 +5,7 @@ import { useState } from "react";
 //create your first component
 const Home = () => {
 
-	
+
 	const [data, setData] = useState("");
 
 	const [listData, setListData] = useState([]);
@@ -47,7 +47,7 @@ const Home = () => {
 
 
 
-	return (<div className="container p-4 bg-light">
+	return (<div className="container p-4">
 		<div className="row justify-content-center">
 			<div className="col-12 col-md-7">
 				<h1 className="text-center text-danger">todos</h1>
@@ -68,7 +68,8 @@ const Home = () => {
 								className="list-group-item"
 							>{tarea}
 								<span className="d-flex justify-content-end p-2"
-									onClick={() => deleteTask(index)}><i className="fa-solid fa-xmark cruz"></i></span>
+								><i className="fa-solid fa-xmark cruz"
+									onClick={() => deleteTask(index)}></i></span>
 							</li>
 						))}
 						<div className="p-2 align-text-bottom suma ">{`${listData.length} items left`}</div>
@@ -81,7 +82,7 @@ const Home = () => {
 	</div>
 
 	);
-	
+
 };
 
 export default Home;
